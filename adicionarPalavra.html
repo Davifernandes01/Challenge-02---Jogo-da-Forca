@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Challenge Alura 2 - jogo da forca</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+             <img class="logo01" src="Vector-laranja.png" alt="logo Alura">
+        </div>
+    </header>
+
+    <main>
+
+        <div class="conteudo">
+              <p class="palavra-desejada">Digite a palavra desejada</p>
+        <input type="text" class="input" placeholder="Digite aqui"  onkeyup="value=value.replace(/[^\A-\Z\u4E00-\u9FA5\ ]/g,'')"
+        onpaste="value=value.replace(/[^\A-Z\u4E00-\u9FA5\ ]/g,'')"
+        oncontextmenu="value=value.replace(/[^\A-\Z\u4E00-\u9FA5\ ]/g,'')">
+        </div>
+
+
+            <div class="botao-adicionar">
+                <button class="btn-adicionar">Adicionar</button>
+                <a href="index.html" class="link-voltar"><button class="btn-voltar">Voltar</button></a>
+            </div>
+
+            <div>
+                <p class="aviso">*Apenas palavras em  maiúsculo e sem acentos!</p>
+            </div>
+            
+                
+            
+        
+    </main>
+
+    <script src="adicionarPalavras.js"></script>
+
+</body>
+</html>
