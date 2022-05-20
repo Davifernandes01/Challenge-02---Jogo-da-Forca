@@ -10,6 +10,7 @@ btnAdicionar.addEventListener("click",function()
        let adiciona = salvarPalavras.push(input.value);
              console.log(salvarPalavras);      
             localStorage.setItem("salvarPalavras", JSON.stringify(salvarPalavras)) 
+    
             
 })
 
