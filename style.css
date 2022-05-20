@@ -177,3 +177,20 @@ footer
 }
 
 
+/* terceira pagina */
+
+.forca {
+    fill: transparent;
+    stroke:  rgb(207, 106, 11);
+    stroke-width: 4px;
+    stroke-linecap: round;
+
+}
+
+
+.div-forca
+{
+    position: relative;
+    top: 80px;
+    left: 400px;
+}
