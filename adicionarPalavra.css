@@ -3,19 +3,37 @@
     position: absolute;
     color: rgb(241, 99, 16);
     top: 80px;
-    left: 450px;
+    left: 100px;
     font-size: 40px;
 }
+.dica-desejada
+{
+    position: absolute;
+    color: rgb(241, 99, 16);
+    top: 80px;
+    left: 700px;
+    font-size: 40px;
 
-.input
+}
+
+#input
 {
     
     position: absolute;
     top: 230px;
-    left: 380px;
-    padding: 90px 90px;
+    left: 100px;
+    padding: 70px 20px;
     font-size: 30px;
   
+}
+
+#dica
+{
+    position: absolute;
+    top: 230px;
+    left: 700px;
+    padding: 70px 20px;
+    font-size: 30px;
 }
 
 .input::-webkit-input-placeholder
@@ -27,8 +45,9 @@
 {
     position: absolute;
     display: inline-block;
-    top: 480px;
-    left: 600px;
+    top: 450px;
+    margin-left: 70px;
+    left: 500px;
 }
 
 .btn-adicionar
@@ -82,7 +101,7 @@
 .aviso
 {
     position: absolute;
-    top: 450px;
+    top: 550px;
     font-size: 20px;
     color: rgb(233, 199, 10);
 
