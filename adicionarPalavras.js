@@ -28,19 +28,41 @@ let InputPalavra = document.querySelector("#input")// pegar a palavra digitada p
             })
       }
 
+            // função criada para quando o usuario não digitar nem a palavra e nem a dica
+            function adicionaPalavraDica(modalPalavra1)
+            {
+                  let modalPalavra = document.getElementById("modal-palavra")
+
+                  modalPalavra.classList.add("mostrarPalavra")
+                  modalPalavra.addEventListener("click", function(event)
+                  {
+                        if(event.target.className == "button-fechar")
+                        {
+                           modalPalavra.classList.remove("mostrarPalavra")
+                        }
+                  })
+
+            }
    
                         
                   //evento que é ativado assim que o usuario apertar no botao
                   btnAdicionar.addEventListener("click",function()
                   { 
+                        //caso o usuario nao digite nada
+                        if(InputPalavra.value == "" || inputDica.value == "")
+                        {
+                              adicionaPalavraDica("modal-Palavra")
+                        }else
+                              {
 
-
+                                    
                         //array para guarar os objetos digitados pelo usuario
                         let palavra = {}
-                         palavra.palavra = document.getElementById("input").value
-                         palavra.dica = document.getElementById("dica").value  
+                        palavra.palavra = document.getElementById("input").value
+                        palavra.dica = document.getElementById("dica").value 
 
-                         // assim  que o usuario apertar o botao adicionar, os objetos que o usuario digitou vao para o array de objetos "salvarPalavras"
+
+                        // assim  que o usuario apertar o botao adicionar, os objetos que o usuario digitou vao para o array de objetos"salvarPalavras"
                         salvarPalavras.push(palavra)
                         
                         //mostra as palavras que estao no array "salvarPalavras" no console
@@ -52,10 +74,14 @@ let InputPalavra = document.querySelector("#input")// pegar a palavra digitada p
 
                         //mostrando o pop-up
                         iniciaModal("modal-adiciona");
-
+                              }
+                  
                         // salvando os itens do array, para usa-los em outra pagina
                         localStorage.setItem("salvar-palavras", JSON.stringify(salvarPalavras))
-                  })          
+                              
+
+
+                  })         
 
 
 
